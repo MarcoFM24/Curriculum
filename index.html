@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Ferraresso - CV Digitale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Stylesheets/Marco_Ferraresso_CV_Site_StyleSheet.css">
+    <script src="js/language-manager.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50',
+                        secondary: '#3498db',
+                        accent: '#e74c3c',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 leading-relaxed bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold">Marco Ferraresso</div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="hover:text-secondary transition duration-300" data-i18n="nav-about">Chi Sono</a>
+                    <a href="#education" class="hover:text-secondary transition duration-300" data-i18n="nav-education">Formazione</a>
+                    <a href="mySkills.html#skills" class="hover:text-secondary transition duration-300" data-i18n="nav-skills">Competenze</a>
+                    <a href="myProjects.html#projects" class="hover:text-secondary transition duration-300" data-i18n="nav-projects">Progetti</a>
+                    <a href="contactMe.html#contact" class="hover:text-secondary transition duration-300" data-i18n="nav-contact">Contatti</a>
+                    <button class="language-toggle">
+                        <i class="fas fa-globe mr-1"></i> IT
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-primary border-t border-gray-700">
+                <div class="py-4 px-4 flex flex-col space-y-4">
+                    <a href="#about" class="hover:text-secondary transition duration-300" data-i18n="nav-about">Chi Sono</a>
+                    <a href="#education" class="hover:text-secondary transition duration-300" data-i18n="nav-education">Formazione</a>
+                    <a href="mySkills.html#skills" class="hover:text-secondary transition duration-300" data-i18n="nav-skills">Competenze</a>
+                    <a href="myProjects.html#projects" class="hover:text-secondary transition duration-300" data-i18n="nav-projects">Progetti</a>
+                    <a href="contactMe.html#contact" class="hover:text-secondary transition duration-300" data-i18n="nav-contact">Contatti</a>
+                    <button class="language-toggle w-fit mt-2">
+                        <i class="fas fa-globe mr-1"></i> IT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 text-center mb-8 md:mb-0">
+                    <img src="images/Marco_Ferraresso.jpg" alt="Marco Ferraresso" class="profile-img mx-auto">
+                </div>
+                <div class="md:w-2/3 md:pl-12 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero-title">Marco Ferraresso</h1>
+                    <p class="text-xl mb-6" data-i18n="hero-subtitle">Studente di Informatica | Sviluppatore Software</p>
+                    <p class="mb-8 text-lg opacity-90" data-i18n="hero-description">Appassionato di tecnologie emergenti e sviluppo software. Sempre alla ricerca di nuove sfide per migliorare le mie competenze.</p>
+                    <div class="hero-buttons flex flex-wrap justify-center md:justify-start gap-3">
+                        <a href="contactMe.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md" data-i18n="hero-contact">Contattami</a>
+                        <a href="mySkills.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300" data-i18n="hero-skills">Le Mie Competenze</a>
+                        <a href="myProjects.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300" data-i18n="hero-projects">I Miei Progetti</a>
+                        <a target="_blank" href="Docs/Marco_Ferraresso_CV.pdf" download="Docs/Marco_Ferraresso_CV.pdf" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-md">
+                            <i class="fas fa-download mr-2"></i><span data-i18n="hero-download">Scarica CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-gray-800" data-i18n="about-title">Chi Sono</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-2/3">
+                    <p class="mb-6 text-gray-700" data-i18n="about-text1">
+                        Sono uno studente del quarto anno presso l'ITI F.Severi, un istituto tecnico superiore. Il mio obiettivo principale è essere il migliore della mia classe, e so che non lo sono ancora e questo mi spinge a impegnarmi per apprendere nuove strategie, idee, informazioni, ecc.
+                    </p>
+                    <p class="mb-8 text-gray-700" data-i18n="about-text2">
+                        Sono un apprendista veloce: una volta compresa l'idea di base, la riformulo aggiungendovi la mia competenza personale. Aiuto attivamente i miei compagni che hanno bisogno di supporto guidandoli attraverso materiale complesso.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <ul class="space-y-3 text-gray-700">
+                                <li><strong class="text-primary" data-i18n="birth-date">Data di nascita:</strong> 24/07/2008</li>
+                                <li><strong class="text-primary" data-i18n="birth-place">Luogo di nascita:</strong> Padova, Italia</li>
+                                <li><strong class="text-primary" data-i18n="nationality">Nazionalità:</strong> Italiana</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="space-y-3 text-gray-700">
+                                <li><strong class="text-primary" data-i18n="license">Patente:</strong> A1</li>
+                                <li><strong class="text-primary" data-i18n="expiry">Scadenza:</strong> 24/07/2035</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/3">
+                    <div class="custom-card p-6">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800" data-i18n="interests-title">Interessi & Hobby</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-motorcycle mt-1 mr-3 text-secondary"></i>
+                                <span data-i18n="interest1">Motorsport (moto, auto, camion)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-swimming-pool mt-1 mr-3 text-secondary"></i>
+                                <span data-i18n="interest2">Pallanuoto</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-microchip mt-1 mr-3 text-secondary"></i>
+                                <span data-i18n="interest3">Tecnologie emergenti</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-cogs mt-1 mr-3 text-secondary"></i>
+                                <span data-i18n="interest4">Motori a combustione interna</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-gray-800" data-i18n="education-title">Formazione</h2>
+            
+            <div class="timeline max-w-3xl">
+                <div class="timeline-item">
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800" data-i18n="education-degree">Diploma di Scuola Superiore - ITI F. Severi</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="education-dates">12/09/2022 – Attuale | Padova, Italia</p>
+                    
+                    <p class="mb-4 text-gray-700" data-i18n="education-text">Alla fine del quarto anno, gli studenti dell'indirizzo ITI "Severi" possono:</p>
+                    
+                    <ul class="list-disc pl-5 mb-6 space-y-2 text-gray-700">
+                        <li data-i18n="education-point1">Identificare e scegliere gli strumenti IT appropriati rispetto alle loro caratteristiche funzionali</li>
+                        <li data-i18n="education-point2">Utilizzare capacità di pensiero analitico e critico per risolvere problemi, elaborando proposte di soluzioni appropriate, sia in termini di algoritmi informatici che della loro implementazione</li>
+                    </ul>
+                    
+                    <p class="mb-2 text-gray-700"><strong class="text-primary" data-i18n="education-field">Indirizzo di studio:</strong> <span data-i18n="education-field-value">Sviluppo e analisi di software e applicazioni, Progettazione e amministrazione di database e reti, Programmi e qualifiche interdisciplinari che coinvolgono le tecnologie dell'informazione e della comunicazione (TIC)</span></p>
+                    <p class="text-gray-700"><strong class="text-primary" data-i18n="education-eqf">Livello EQF:</strong> <span data-i18n="education-eqf-value">Livello 4</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p data-i18n="footer-copyright">© 2025 Marco Ferraresso. Tutti i diritti riservati.</p>
+            <div class="flex justify-center mt-4 space-x-6">
+                <a target="_blank" href="https://www.linkedin.com/in/marco-ferraresso-b13920347/" class="hover:text-secondary transition duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a target="_blank" href="https://github.com/MarcoFM24" class="hover:text-secondary transition duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
